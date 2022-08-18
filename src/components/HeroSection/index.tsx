@@ -1,14 +1,33 @@
-import heroImg from '../../assets/hero-image.png'
-// import heroImg from '../../assets/chef.svg'
+import { ForkKnife, Hamburger, Martini, Pizza, Wine } from 'phosphor-react'
+
+import heroImg from '../../assets/girl.svg'
 
 export function HeroSection() {
   return (
-    <section className='flex items-center justify-between'>
-      <h1 className='text-9xl font-black'>
-        Mari Diva
-      </h1>
+    <section className='flex flex-col items-start md:items-center md:flex-row justify-between'>
+      <div>
+        <h1 className='text-9xl font-black'>
+          Nina
+        </h1>
 
-      <img src={heroImg} alt="" className='w-[592px] h-[514px]' />
+        <span className='font-thin text-4xl'>
+          EXPERIMENTA!
+        </span>
+
+        <div className='flex items-center space-x-2 mt-12'>
+          <ForkKnife size={32} weight="regular" className='text-slate-700' />
+          <Hamburger size={32} weight="regular" className='text-slate-700' />
+          <Pizza size={32} weight="regular" className='text-slate-700' />
+          <Wine size={32} weight="regular" className='text-slate-700' />
+          <Martini size={32} weight="regular" className='text-slate-700' />
+        </div>
+      </div>
+
+      <img
+        src={heroImg}
+        alt="A girl with a fork at the restaurant"
+        className='hidden md:flex w-[592px] h-[514px] object-cover'
+      />
     </section>
   )
 }
