@@ -11,6 +11,7 @@ export type Post = {
   rating: number;
   createdAt: string;
   slug: string;
+  genres: string;
 };
 
 export type GetPostsQuery = {
@@ -30,6 +31,7 @@ export const GET_POSTS = gql`
       rating
       createdAt
       slug
+      genres
     }
   }
 `;
