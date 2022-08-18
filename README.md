@@ -1,4 +1,4 @@
-![image 10](https://user-images.githubusercontent.com/66570560/185268809-1e75ecdd-22a8-45c2-871f-a87e44a8a6d8.png)
+![print-aeras-web](https://user-images.githubusercontent.com/66570560/185383886-7fd16ad1-5581-4bf2-99ae-007ecfc97408.png)
 
 # Project Title
 
@@ -6,4 +6,8 @@ A blog with your restaurantes/pubs experiences by Marina Lemos.
 
 ## Tech Stack
 
-**Client:** Vite, Typescript, TailwindCSS, Graphql, Hygraph
+- Vite
+- Typescript
+- TailwindCSS
+- Graphql
+- Hygraph
