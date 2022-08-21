@@ -7,11 +7,8 @@ export type Post = {
   description: {
     markdown: string;
   };
-  price: number;
-  rating: number;
-  createdAt: string;
   slug: string;
-  genres: string;
+  genres: string[];
 };
 
 export type GetPostsQuery = {
@@ -27,9 +24,6 @@ export const GET_POSTS = gql`
       description {
         markdown
       }
-      price
-      rating
-      createdAt
       slug
       genres
     }

@@ -15,11 +15,11 @@ export function HeroSection() {
         </span>
 
         <div className='flex items-center space-x-2 mt-12'>
-          <ForkKnife size={32} weight="regular" className='text-slate-700' />
-          <Hamburger size={32} weight="regular" className='text-slate-700' />
-          <Pizza size={32} weight="regular" className='text-slate-700' />
-          <Wine size={32} weight="regular" className='text-slate-700' />
-          <Martini size={32} weight="regular" className='text-slate-700' />
+          <ForkKnife size={32} weight="regular" className='text-slate-700 hover:scale-125 transition-transform' />
+          <Hamburger size={32} weight="regular" className='text-slate-700 hover:scale-125 transition-transform' />
+          <Pizza size={32} weight="regular" className='text-slate-700 hover:scale-125 transition-transform' />
+          <Wine size={32} weight="regular" className='text-slate-700 hover:scale-125 transition-transform' />
+          <Martini size={32} weight="regular" className='text-slate-700 hover:scale-125 transition-transform' />
         </div>
       </div>
 

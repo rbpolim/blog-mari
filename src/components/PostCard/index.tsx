@@ -2,11 +2,6 @@ import { Link } from "react-router-dom";
 
 import { Post } from "../../graphql/queries/get-posts-query";
 
-const badges = [
-  'asian',
-  'bakery',
-  'italian'
-]
 type PostCardProps = {
   post: Post;
 }
@@ -16,9 +11,9 @@ export function PostCard({ post }: PostCardProps) {
     <Link
       to={`/post/${post.slug}`}
       className="flex flex-col p-6 border border-zinc-800 hover:bg-gradient-to-b hover:from-transparent hover:to-orange-100
-        hover:border-orange-900 hover:shadow-lg rounded-md transition-colors duration-200 hover:translate-y-1 space-y-2"
+        hover:border-orange-900 hover:shadow-lg rounded-md transition-colors duration-200 hover:translate-y-1 space-y-2 active:scale-95 bg-white"
     >
-      <h3 className="text-left text-4xl font-bold">
+      <h3 className="text-left text-3xl font-bold">
         {post.title}
       </h3>
 
@@ -27,8 +22,8 @@ export function PostCard({ post }: PostCardProps) {
       </p>
 
       <div className="flex items-center gap-2 pt-4">
-        {badges.map((badge) => (
-          <span className="py-1 px-2 bg-white border border-orange-900 rounded-2xl text-sm text-orange-900">
+        {post.genres.map((badge) => (
+          <span className="py-1 px-2 border ring-1 ring-orange-600 rounded-2xl text-xs text-white bg-orange-500 font-bold">
             {badge}
           </span>
         ))}

@@ -13,7 +13,7 @@ export type Post = {
   price: number;
   rating: number;
   genres: string;
-  image: Image[];
+  images: Image[];
   createdAt: string;
   slug: string;
 };
