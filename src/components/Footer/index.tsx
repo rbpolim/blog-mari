@@ -3,7 +3,7 @@ import { InstagramLogo } from "phosphor-react";
 export function Footer() {
   return (
     <footer className="flex w-full h-24 bg-zinc-700 text-white">
-      <div className="flex items-center justify-between max-w-5xl mx-auto w-full">
+      <div className="flex items-center justify-between h-full max-w-5xl mx-auto w-full">
         <div className="flex items-center">
           <h1 className="uppercase mr-2 font-semibold">
             Todos os direitos reservados © Nina
