@@ -1,3 +1,4 @@
+import { LinkSimple } from "phosphor-react";
 import { Link } from "react-router-dom";
 
 import { Post } from "../../graphql/queries/get-posts-query";
@@ -10,8 +11,7 @@ export function PostCard({ post }: PostCardProps) {
   return (
     <Link
       to={`/post/${post.slug}`}
-      className="flex flex-col p-6 border border-zinc-800 hover:bg-gradient-to-b hover:from-transparent hover:to-orange-100
-        hover:border-orange-900 hover:shadow-lg rounded-md transition-colors duration-200 hover:translate-y-1 space-y-2 active:scale-95 bg-white"
+      className="flex flex-col p-6 border border-slate-600 hover:bg-gradient-to-b hover:from-transparent hover:to-orange-100 hover:ring-1 shadow-md hover:ring-orange-900 hover:shadow-lg rounded-md transition-colors duration-200 hover:translate-y-1 space-y-2 active:scale-95 bg-white relative"
     >
       <h3 className="text-left text-3xl font-bold">
         {post.title}
@@ -23,7 +23,7 @@ export function PostCard({ post }: PostCardProps) {
 
       <div className="flex items-center gap-2 pt-4">
         {post.genres.map((badge) => (
-          <span className="py-1 px-2 border ring-1 ring-orange-600 rounded-2xl text-xs text-white bg-orange-500 font-bold">
+          <span className="py-1 px-2 uppercase border ring-1 ring-orange-600 rounded-2xl text-xs text-white bg-orange-500 font-bold">
             {badge}
           </span>
         ))}
