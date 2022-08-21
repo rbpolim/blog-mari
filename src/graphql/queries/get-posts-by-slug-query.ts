@@ -1,6 +1,7 @@
 import { gql } from "@apollo/client";
 
 type Image = {
+  id: string;
   url: string;
 };
 
@@ -12,7 +13,7 @@ export type Post = {
   };
   price: number;
   rating: number;
-  genres: string;
+  genres: string[];
   images: Image[];
   createdAt: string;
   slug: string;
@@ -35,6 +36,7 @@ export const GET_POSTS_BY_SLUG = gql`
       rating
       genres
       images {
+        id
         url
       }
     }
