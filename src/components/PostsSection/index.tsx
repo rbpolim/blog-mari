@@ -1,9 +1,9 @@
 import { useQuery } from "@apollo/client";
 
 import { PostCard } from "../PostCard";
+import { ShimmerCard } from "../ShimmerCard";
 
 import { GetPostsQuery, GET_POSTS } from "../../graphql/queries/get-posts-query";
-import { ShimmerCard } from "../ShimmerCard";
 
 export function PostsSection() {
   const { data, loading, error } = useQuery<GetPostsQuery>(GET_POSTS)
