@@ -1,9 +1,9 @@
 import { useQuery } from "@apollo/client";
-import { ArrowLeft } from "phosphor-react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
+
 import { Footer } from "../../components/Footer";
 import { PostHeader } from "../../components/PostHeader";
-
+import { ReviewInfos } from "../../components/ReviewInfos";
 import { Slider, Slide } from "../../components/Slider";
 
 import { GetPostsBySlugQuery, GET_POSTS_BY_SLUG } from "../../graphql/queries/get-posts-by-slug-query";
@@ -24,8 +24,8 @@ export function PostPage() {
   }
 
   return (
-    <div className="h-screen w-screen">
-      <div className="flex flex-col max-w-5xl mx-auto my-8 mb-40">
+    <div className="flex flex-col min-h-screen min-w-full overflow-x-hidden">
+      <div className="flex flex-col flex-1 max-w-5xl mx-auto my-8 mb-40 leading-relaxed">
         <PostHeader
           title={data!.post.title}
           createdAt={data!.post.createdAt}
@@ -33,9 +33,9 @@ export function PostPage() {
 
         <Slider>
           {data?.post.images.map((image) => (
-            <Slide key={image.url}>
+            <Slide key={image.id}>
               <img
-                alt={image.url}
+                alt="Image of the post"
                 src={image.url}
                 className="object-cover object-center cursor-grab"
               />
@@ -43,9 +43,15 @@ export function PostPage() {
           ))}
         </Slider>
 
-        <p className="font-mono leading-relaxed mt-8 text-sm text-zinc-800 max-w-3xl mx-auto">
+        <p className="mt-8 text-sm text-zinc-800 max-w-3xl mx-auto">
           {data?.post.description.markdown}
         </p>
+
+        <ReviewInfos
+          rating={data!.post.rating}
+          price={data!.post.price}
+          genres={data!.post.genres}
+        />
       </div>
 
       <Footer />
