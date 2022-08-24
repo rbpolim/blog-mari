@@ -11,7 +11,7 @@ export function PostCard({ post }: PostCardProps) {
   return (
     <Link
       to={`/post/${post.slug}`}
-      className="flex flex-col p-6 border border-slate-600 hover:bg-gradient-to-b hover:from-transparent hover:to-orange-100 hover:ring-1 shadow-md hover:ring-orange-900 hover:shadow-lg rounded-md transition-colors duration-200 hover:translate-y-1 space-y-2 active:scale-95 bg-white relative"
+      className="flex flex-col p-6 border border-zinc-600 hover:border-orange-800 hover:bg-gradient-to-b hover:from-transparent hover:to-orange-100 shadow-md hover:shadow-lg rounded-md transition-colors duration-200 hover:translate-y-1 space-y-2 active:scale-95 bg-white relative"
     >
       <h3 className="text-left text-3xl font-bold">
         {post.title}
