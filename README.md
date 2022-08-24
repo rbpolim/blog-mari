@@ -11,3 +11,9 @@ A blog with your restaurantes/pubs experiences by Marina Lemos.
 - TailwindCSS
 - Graphql
 - Hygraph
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env.local file
+
+`VITE_API_URL`
